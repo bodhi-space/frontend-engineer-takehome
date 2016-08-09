@@ -21,7 +21,7 @@
                console.log('TakeHome Started') 
                $http.get('SalesTransactions.json')
                .then(function(response) {
-                   console.log('rezzie', response)
+                   console.log('response', response)
                    $scope.SalesTransactionData = response.data; 
                })
            };
