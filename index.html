@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <title>front end take home</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body ng-app='takeHomeApp'>
+    <div ng-controller='TakeHomeController'>
+        <visualize-data></visualize-data>
+        
+        <pre>{{SalesTransactionData | json}}</pre>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular.min.js'></script>
+    <script>
+        (function(){
+            angular.module('takeHomeApp', []);
+        })();
+
+       (function(){
+           function controller($scope, $http) {
+               console.log('TakeHome Started') 
+               $http.get('SalesTransactions.json')
+               .then(function(response) {
+                   console.log('rezzie', response)
+                   $scope.SalesTransactionData = response.data; 
+               })
+           };
+           angular.module('takeHomeApp').controller('TakeHomeController', controller);
+       })()
+       
+    </script>
+    <script src='transform.factory.js'></script>
+    <script src='visualize.directive.js'></script>
+</body>
+</html>

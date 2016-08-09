@@ -1,0 +1,807 @@
+﻿[
+	{
+		"order_number": 20006,
+		"item_count": 4,
+		"external_ids": [
+			{
+				"key": "dff581774416dc917cda645943777275047c98de"
+			}
+		],
+		"store_id": "56a937b28ae1893070421232",
+		"employee": {
+			"id": "9936"
+		},
+		"business_day": "2016-01-19",
+		"order_opened_at": "2015-08-07T17:15:00.000Z",
+		"revenue_center": {
+			"id": "2"
+		},
+		"type": {
+			"id": "1",
+			"name": "1"
+		},
+		"order_closed_at": "2015-08-07T18:30:00.000Z",
+		"timestamp": "2015-08-07T18:30:00.000Z",
+		"net_total": {
+			"value": 3445,
+			"code": "USD",
+			"scale": 2
+		},
+		"discount_total": {
+			"value": 0,
+			"code": "USD",
+			"scale": 2
+		},
+		"tax_total": {
+			"value": 242,
+			"code": "USD",
+			"scale": 2
+		},
+		"gross_total": {
+			"value": 3687,
+			"code": "USD",
+			"scale": 2
+		},
+		"tender_total": {
+			"value": 4187,
+			"code": "USD",
+			"scale": 2
+		},
+		"sys_created_at": "2016-01-29T05:02:40.501Z",
+		"tax_id": "0",
+		"tax_exempt": true,
+		"guest_count": 2,
+		"sys_version": 1,
+		"sys_created_by": "admin__daniel",
+		"sys_modified_at": "2015-08-08T00:43:40.000Z",
+		"sys_modified_by": "admin__bracco",
+		"transaction_id": "55c506f0a0143e4905285a15",
+		"sys_id": "56aaf2708ae1891afd95acc5",
+		"sys_type_version": 13
+	},
+	{
+		"order_number": 20007,
+		"item_count": 3,
+		"external_ids": [
+			{
+				"key": "0d0ecbbd89d2d3ee4432ffaf7b5261f64e07b5f1"
+			}
+		],
+		"store_id": "56a937b28ae1893070421232",
+		"employee": {
+			"id": "1025"
+		},
+		"business_day": "2016-01-18",
+		"order_opened_at": "2015-08-07T17:16:00.000Z",
+		"revenue_center": {
+			"id": "2"
+		},
+		"type": {
+			"id": "1",
+			"name": "1"
+		},
+		"order_closed_at": "2015-08-07T18:23:00.000Z",
+		"timestamp": "2015-08-07T18:23:00.000Z",
+		"net_total": {
+			"value": 2865,
+			"code": "USD",
+			"scale": 2
+		},
+		"discount_total": {
+			"value": 0,
+			"code": "USD",
+			"scale": 2
+		},
+		"tax_total": {
+			"value": 201,
+			"code": "USD",
+			"scale": 2
+		},
+		"gross_total": {
+			"value": 3066,
+			"code": "USD",
+			"scale": 2
+		},
+		"tender_total": {
+			"value": 3466,
+			"code": "USD",
+			"scale": 2
+		},
+		"sys_created_at": "2016-01-29T05:02:40.515Z",
+		"tax_id": "0",
+		"tax_exempt": true,
+		"guest_count": 1,
+		"sys_version": 1,
+		"sys_created_by": "admin__daniel",
+		"sys_modified_at": "2015-08-08T00:43:40.000Z",
+		"sys_modified_by": "admin__bracco",
+		"transaction_id": "55c506f0a0143e4905285a16",
+		"sys_id": "56aaf2708ae1891afd95acc6",
+		"sys_type_version": 13
+	},
+	{
+		"order_number": 20008,
+		"item_count": 1,
+		"external_ids": [
+			{
+				"key": "d6283951e9eea55eeeaf63f48b9630de323ee013"
+			}
+		],
+		"store_id": "56a937b28ae1893070421232",
+		"employee": {
+			"id": "9936"
+		},
+		"business_day": "2016-01-17",
+		"order_opened_at": "2015-08-07T17:19:00.000Z",
+		"revenue_center": {
+			"id": "2"
+		},
+		"type": {
+			"id": "1",
+			"name": "1"
+		},
+		"order_closed_at": "2015-08-07T18:01:00.000Z",
+		"timestamp": "2015-08-07T18:01:00.000Z",
+		"net_total": {
+			"value": 750,
+			"code": "USD",
+			"scale": 2
+		},
+		"discount_total": {
+			"value": 0,
+			"code": "USD",
+			"scale": 2
+		},
+		"tax_total": {
+			"value": 53,
+			"code": "USD",
+			"scale": 2
+		},
+		"gross_total": {
+			"value": 803,
+			"code": "USD",
+			"scale": 2
+		},
+		"tender_total": {
+			"value": 950,
+			"code": "USD",
+			"scale": 2
+		},
+		"sys_created_at": "2016-01-29T05:02:40.529Z",
+		"tax_id": "0",
+		"tax_exempt": true,
+		"guest_count": 1,
+		"sys_version": 1,
+		"sys_created_by": "admin__daniel",
+		"sys_modified_at": "2015-08-08T00:43:40.000Z",
+		"sys_modified_by": "admin__bracco",
+		"transaction_id": "55c506f0a0143e4905285a17",
+		"sys_id": "56aaf2708ae1891afd95acc7",
+		"sys_type_version": 13
+	},
+	{
+		"order_number": 20009,
+		"item_count": 3,
+		"external_ids": [
+			{
+				"key": "def3f000a6b0e7ee33aa6ef78d22dc3988f45241"
+			}
+		],
+		"store_id": "56a937b28ae1893070421232",
+		"employee": {
+			"id": "9936"
+		},
+		"business_day": "2016-01-16",
+		"order_opened_at": "2015-08-07T17:24:00.000Z",
+		"revenue_center": {
+			"id": "2"
+		},
+		"type": {
+			"id": "1",
+			"name": "1"
+		},
+		"order_closed_at": "2015-08-07T18:10:00.000Z",
+		"timestamp": "2015-08-07T18:10:00.000Z",
+		"net_total": {
+			"value": 750,
+			"code": "USD",
+			"scale": 2
+		},
+		"discount_total": {
+			"value": 0,
+			"code": "USD",
+			"scale": 2
+		},
+		"tax_total": {
+			"value": 53,
+			"code": "USD",
+			"scale": 2
+		},
+		"gross_total": {
+			"value": 803,
+			"code": "USD",
+			"scale": 2
+		},
+		"tender_total": {
+			"value": 803,
+			"code": "USD",
+			"scale": 2
+		},
+		"sys_created_at": "2016-01-29T05:02:40.542Z",
+		"tax_id": "0",
+		"tax_exempt": true,
+		"guest_count": 1,
+		"sys_version": 1,
+		"sys_created_by": "admin__daniel",
+		"sys_modified_at": "2015-08-08T00:43:40.000Z",
+		"sys_modified_by": "admin__bracco",
+		"transaction_id": "55c506f0a0143e4905285a18",
+		"sys_id": "56aaf2708ae1891afd95acc8",
+		"sys_type_version": 13
+	},
+	{
+		"order_number": 20010,
+		"item_count": 3,
+		"external_ids": [
+			{
+				"key": "8780c07838d3db81621119407a2a1744185f08cf"
+			}
+		],
+		"store_id": "56a937b28ae1893070421232",
+		"employee": {
+			"id": "9936"
+		},
+		"business_day": "2016-01-15",
+		"order_opened_at": "2015-08-07T17:24:00.000Z",
+		"revenue_center": {
+			"id": "2"
+		},
+		"type": {
+			"id": "1",
+			"name": "1"
+		},
+		"order_closed_at": "2015-08-07T18:01:00.000Z",
+		"timestamp": "2015-08-07T18:01:00.000Z",
+		"net_total": {
+			"value": 750,
+			"code": "USD",
+			"scale": 2
+		},
+		"discount_total": {
+			"value": 0,
+			"code": "USD",
+			"scale": 2
+		},
+		"tax_total": {
+			"value": 53,
+			"code": "USD",
+			"scale": 2
+		},
+		"gross_total": {
+			"value": 803,
+			"code": "USD",
+			"scale": 2
+		},
+		"tender_total": {
+			"value": 803,
+			"code": "USD",
+			"scale": 2
+		},
+		"sys_created_at": "2016-01-29T05:02:40.556Z",
+		"tax_id": "0",
+		"tax_exempt": true,
+		"guest_count": 1,
+		"sys_version": 1,
+		"sys_created_by": "admin__daniel",
+		"sys_modified_at": "2015-08-08T00:43:40.000Z",
+		"sys_modified_by": "admin__bracco",
+		"transaction_id": "55c506f0a0143e4905285a19",
+		"sys_id": "56aaf2708ae1891afd95acc9",
+		"sys_type_version": 13
+	},
+	{
+		"order_number": 20011,
+		"item_count": 1,
+		"external_ids": [
+			{
+				"key": "650a23d31048de9a57cc1f8435422059670a9682"
+			}
+		],
+		"store_id": "56a937b28ae1893070421232",
+		"employee": {
+			"id": "9936"
+		},
+		"business_day": "2016-01-14",
+		"order_opened_at": "2015-08-07T17:24:00.000Z",
+		"revenue_center": {
+			"id": "2"
+		},
+		"type": {
+			"id": "1",
+			"name": "1"
+		},
+		"order_closed_at": "2015-08-07T17:58:00.000Z",
+		"timestamp": "2015-08-07T17:58:00.000Z",
+		"net_total": {
+			"value": 750,
+			"code": "USD",
+			"scale": 2
+		},
+		"discount_total": {
+			"value": 0,
+			"code": "USD",
+			"scale": 2
+		},
+		"tax_total": {
+			"value": 53,
+			"code": "USD",
+			"scale": 2
+		},
+		"gross_total": {
+			"value": 803,
+			"code": "USD",
+			"scale": 2
+		},
+		"tender_total": {
+			"value": 803,
+			"code": "USD",
+			"scale": 2
+		},
+		"sys_created_at": "2016-01-29T05:02:40.569Z",
+		"tax_id": "0",
+		"tax_exempt": true,
+		"guest_count": 1,
+		"sys_version": 1,
+		"sys_created_by": "admin__daniel",
+		"sys_modified_at": "2015-08-08T00:43:40.000Z",
+		"sys_modified_by": "admin__bracco",
+		"transaction_id": "55c506f0a0143e4905285a1a",
+		"sys_id": "56aaf2708ae1891afd95acca",
+		"sys_type_version": 13
+	},
+	{
+		"order_number": 10001,
+		"item_count": 7,
+		"external_ids": [
+			{
+				"key": "ea4697ade916fcdc22b163b4333a8f0658d4439d"
+			}
+		],
+		"store_id": "56a937b28ae1893070421232",
+		"employee": {
+			"id": "8512"
+		},
+		"business_day": "2016-01-27",
+		"order_opened_at": "2015-08-07T16:08:00.000Z",
+		"revenue_center": {
+			"id": "2"
+		},
+		"type": {
+			"id": "1",
+			"name": "1"
+		},
+		"order_closed_at": "2015-08-07T16:45:00.000Z",
+		"timestamp": "2015-08-07T16:45:00.000Z",
+		"net_total": {
+			"value": 2025,
+			"code": "USD",
+			"scale": 2
+		},
+		"discount_total": {
+			"value": 0,
+			"code": "USD",
+			"scale": 2
+		},
+		"tax_total": {
+			"value": 142,
+			"code": "USD",
+			"scale": 2
+		},
+		"gross_total": {
+			"value": 2167,
+			"code": "USD",
+			"scale": 2
+		},
+		"tender_total": {
+			"value": 2667,
+			"code": "USD",
+			"scale": 2
+		},
+		"sys_created_at": "2016-01-29T05:02:40.379Z",
+		"tax_id": "0",
+		"tax_exempt": true,
+		"guest_count": 1,
+		"sys_version": 1,
+		"sys_created_by": "admin__daniel",
+		"sys_modified_at": "2015-08-08T00:43:40.000Z",
+		"sys_modified_by": "admin__bracco",
+		"transaction_id": "55c506f0a0143e4905285a0c",
+		"sys_id": "56aaf2708ae1891afd95acbd",
+		"sys_type_version": 13
+	},
+	{
+		"sys_version": 1,
+		"sys_type_version": 14,
+		"store_id": "l8zeL",
+		"business_day": "2016-05-13",
+		"tender_total": {
+			"code": "USD",
+			"scale": 2,
+			"value": 620
+		},
+		"sys_created_by": "admin__daniel",
+		"sys_created_at": "2016-05-13T18:26:27.655Z",
+		"transaction_id": "FGHG01",
+		"timestamp": "2015-11-11T05:58:31.296Z",
+		"sys_id": "57361c539c00985b4d286954"
+	},
+	{
+		"order_number": 10006,
+		"item_count": 2,
+		"external_ids": [
+			{
+				"key": "2ddec61243051f2dc55a2d82b57c17e079796646"
+			}
+		],
+		"store_id": "56a937b28ae1893070421232",
+		"employee": {
+			"id": "8512"
+		},
+		"business_day": "2016-01-26",
+		"order_opened_at": "2015-08-07T16:46:00.000Z",
+		"revenue_center": {
+			"id": "2"
+		},
+		"type": {
+			"id": "1",
+			"name": "1"
+		},
+		"order_closed_at": "2015-08-07T22:18:00.000Z",
+		"timestamp": "2015-08-07T22:18:00.000Z",
+		"net_total": {
+			"value": 319,
+			"code": "USD",
+			"scale": 2
+		},
+		"discount_total": {
+			"value": -106,
+			"code": "USD",
+			"scale": 2
+		},
+		"tax_total": {
+			"value": 22,
+			"code": "USD",
+			"scale": 2
+		},
+		"gross_total": {
+			"value": 447,
+			"code": "USD",
+			"scale": 2
+		},
+		"tender_total": {
+			"value": 341,
+			"code": "USD",
+			"scale": 2
+		},
+		"sys_created_at": "2016-01-29T05:02:40.401Z",
+		"tax_id": "0",
+		"tax_exempt": true,
+		"guest_count": 1,
+		"sys_version": 1,
+		"sys_created_by": "admin__daniel",
+		"point_of_sale": {
+			"id": "2"
+		},
+		"sys_modified_at": "2015-08-08T00:43:40.000Z",
+		"sys_modified_by": "admin__bracco",
+		"transaction_id": "55c506f0a0143e4905285a0d",
+		"sys_id": "56aaf2708ae1891afd95acbe",
+		"sys_type_version": 13
+	},
+	{
+		"order_number": 10011,
+		"item_count": 1,
+		"external_ids": [
+			{
+				"key": "58dbff851f4379d8b294c12837ad0666e304fd41"
+			}
+		],
+		"store_id": "56a937b28ae1893070421232",
+		"employee": {
+			"id": "8512"
+		},
+		"business_day": "2016-01-25",
+		"order_opened_at": "2015-08-07T17:14:00.000Z",
+		"revenue_center": {
+			"id": "2"
+		},
+		"type": {
+			"id": "4",
+			"name": "1"
+		},
+		"order_closed_at": "2015-08-07T17:14:00.000Z",
+		"timestamp": "2015-08-07T17:14:00.000Z",
+		"net_total": {
+			"value": 350,
+			"code": "USD",
+			"scale": 2
+		},
+		"discount_total": {
+			"value": 0,
+			"code": "USD",
+			"scale": 2
+		},
+		"tax_total": {
+			"value": 25,
+			"code": "USD",
+			"scale": 2
+		},
+		"gross_total": {
+			"value": 375,
+			"code": "USD",
+			"scale": 2
+		},
+		"tender_total": {
+			"value": 375,
+			"code": "USD",
+			"scale": 2
+		},
+		"sys_created_at": "2016-01-29T05:02:40.417Z",
+		"point_of_sale": {
+			"id": "2"
+		},
+		"tax_id": "0",
+		"tax_exempt": true,
+		"guest_count": 1,
+		"sys_version": 1,
+		"sys_created_by": "admin__daniel",
+		"sys_modified_at": "2015-08-08T00:43:40.000Z",
+		"sys_modified_by": "admin__bracco",
+		"transaction_id": "55c506f0a0143e4905285a0e",
+		"sys_id": "56aaf2708ae1891afd95acbf",
+		"sys_type_version": 13
+	},
+	{
+		"order_number": 10013,
+		"item_count": 1,
+		"external_ids": [
+			{
+				"key": "89809588477898f8df759ef0908c509c510df112"
+			}
+		],
+		"store_id": "56a937b28ae1893070421232",
+		"employee": {
+			"id": "8512"
+		},
+		"business_day": "2016-01-24",
+		"order_opened_at": "2015-08-07T17:15:00.000Z",
+		"revenue_center": {
+			"id": "2"
+		},
+		"type": {
+			"id": "4",
+			"name": "1"
+		},
+		"order_closed_at": "2015-08-07T17:42:00.000Z",
+		"timestamp": "2015-08-07T17:42:00.000Z",
+		"net_total": {
+			"value": 1695,
+			"code": "USD",
+			"scale": 2
+		},
+		"discount_total": {
+			"value": 0,
+			"code": "USD",
+			"scale": 2
+		},
+		"tax_total": {
+			"value": 119,
+			"code": "USD",
+			"scale": 2
+		},
+		"gross_total": {
+			"value": 1814,
+			"code": "USD",
+			"scale": 2
+		},
+		"tender_total": {
+			"value": 2214,
+			"code": "USD",
+			"scale": 2
+		},
+		"sys_created_at": "2016-01-29T05:02:40.432Z",
+		"tax_id": "0",
+		"tax_exempt": true,
+		"guest_count": 1,
+		"sys_version": 1,
+		"sys_created_by": "admin__daniel",
+		"point_of_sale": {
+			"id": "2"
+		},
+		"sys_modified_at": "2015-08-08T00:43:40.000Z",
+		"sys_modified_by": "admin__bracco",
+		"transaction_id": "55c506f0a0143e4905285a0f",
+		"sys_id": "56aaf2708ae1891afd95acc0",
+		"sys_type_version": 13
+	},
+	{
+		"order_number": 20001,
+		"item_count": 6,
+		"external_ids": [
+			{
+				"key": "39dddcfb775ce20baaeb7a462966320a5598d1fe"
+			}
+		],
+		"store_id": "56a937b28ae1893070421232",
+		"employee": {
+			"id": "9936"
+		},
+		"business_day": "2016-01-23",
+		"order_opened_at": "2015-08-07T16:38:00.000Z",
+		"revenue_center": {
+			"id": "2"
+		},
+		"type": {
+			"id": "1",
+			"name": "1"
+		},
+		"order_closed_at": "2015-08-07T18:11:00.000Z",
+		"timestamp": "2015-08-07T18:11:00.000Z",
+		"net_total": {
+			"value": 2070,
+			"code": "USD",
+			"scale": 2
+		},
+		"discount_total": {
+			"value": 0,
+			"code": "USD",
+			"scale": 2
+		},
+		"tax_total": {
+			"value": 145,
+			"code": "USD",
+			"scale": 2
+		},
+		"gross_total": {
+			"value": 2215,
+			"code": "USD",
+			"scale": 2
+		},
+		"tender_total": {
+			"value": 2215,
+			"code": "USD",
+			"scale": 2
+		},
+		"sys_created_at": "2016-01-29T05:02:40.445Z",
+		"tax_id": "0",
+		"tax_exempt": true,
+		"guest_count": 2,
+		"sys_version": 1,
+		"sys_created_by": "admin__daniel",
+		"sys_modified_at": "2015-08-08T00:43:40.000Z",
+		"sys_modified_by": "admin__bracco",
+		"transaction_id": "55c506f0a0143e4905285a10",
+		"sys_id": "56aaf2708ae1891afd95acc1",
+		"sys_type_version": 13
+	},
+	{
+		"order_number": 20003,
+		"item_count": 1,
+		"external_ids": [
+			{
+				"key": "239c94033da782c5462333af95afd935be859165"
+			}
+		],
+		"store_id": "56a937b28ae1893070421232",
+		"employee": {
+			"id": "601"
+		},
+		"business_day": "2016-01-22",
+		"order_opened_at": "2015-08-07T16:50:00.000Z",
+		"revenue_center": {
+			"id": "2"
+		},
+		"type": {
+			"id": "1",
+			"name": "1"
+		},
+		"order_closed_at": "2015-08-07T17:46:00.000Z",
+		"timestamp": "2015-08-07T17:46:00.000Z",
+		"net_total": {
+			"value": 1470,
+			"code": "USD",
+			"scale": 2
+		},
+		"discount_total": {
+			"value": 0,
+			"code": "USD",
+			"scale": 2
+		},
+		"tax_total": {
+			"value": 103,
+			"code": "USD",
+			"scale": 2
+		},
+		"gross_total": {
+			"value": 1573,
+			"code": "USD",
+			"scale": 2
+		},
+		"tender_total": {
+			"value": 1573,
+			"code": "USD",
+			"scale": 2
+		},
+		"sys_created_at": "2016-01-29T05:02:40.459Z",
+		"tax_id": "0",
+		"tax_exempt": true,
+		"guest_count": 1,
+		"sys_version": 1,
+		"sys_created_by": "admin__daniel",
+		"sys_modified_at": "2015-08-08T00:43:40.000Z",
+		"sys_modified_by": "admin__bracco",
+		"transaction_id": "55c506f0a0143e4905285a12",
+		"sys_id": "56aaf2708ae1891afd95acc2",
+		"sys_type_version": 13
+	},
+	{
+		"order_number": 20004,
+		"item_count": 4,
+		"external_ids": [
+			{
+				"key": "d7f0cd7b9057d1248c828e87e2c3223c81b66857"
+			}
+		],
+		"store_id": "56a937b28ae1893070421232",
+		"employee": {
+			"id": "1025"
+		},
+		"business_day": "2016-01-21",
+		"order_opened_at": "2015-08-07T16:52:00.000Z",
+		"revenue_center": {
+			"id": "2"
+		},
+		"type": {
+			"id": "1",
+			"name": "1"
+		},
+		"order_closed_at": "2015-08-07T18:23:00.000Z",
+		"timestamp": "2015-08-07T18:23:00.000Z",
+		"net_total": {
+			"value": 3645,
+			"code": "USD",
+			"scale": 2
+		},
+		"discount_total": {
+			"value": 0,
+			"code": "USD",
+			"scale": 2
+		},
+		"tax_total": {
+			"value": 256,
+			"code": "USD",
+			"scale": 2
+		},
+		"gross_total": {
+			"value": 3901,
+			"code": "USD",
+			"scale": 2
+		},
+		"tender_total": {
+			"value": 3901,
+			"code": "USD",
+			"scale": 2
+		},
+		"sys_created_at": "2016-01-29T05:02:40.473Z",
+		"tax_id": "0",
+		"tax_exempt": true,
+		"guest_count": 1,
+		"sys_version": 1,
+		"sys_created_by": "admin__daniel",
+		"sys_modified_at": "2015-08-08T00:43:40.000Z",
+		"sys_modified_by": "admin__bracco",
+		"transaction_id": "55c506f0a0143e4905285a13",
+		"sys_id": "56aaf2708ae1891afd95acc3",
+		"sys_type_version": 13
+	}
+]
