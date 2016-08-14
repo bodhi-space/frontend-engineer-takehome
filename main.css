@@ -92,19 +92,22 @@ html, body {
 
 .text-area2{
   background: #099bca;
-  height: 450px;
+  height: 300px;
   color: #484848;
-  margin: 0px 2% 0px 2%;
+  margin: 20px 2% 0px 2%;
   text-align: left;
   border: 1px solid #c1c1c1;
   padding-left: 30px;
-  padding-top: -200px;
-  display: show;
+}
+
+.text-area2.hide{
+  display: none;
 }
 
 .bullet-points li{
   font-size: 18px;
   list-style-type: square;
+  // padding-top: 10px;
   line-height: 20px;
 }
 
@@ -114,11 +117,11 @@ html, body {
 
 .bullet-points li:nth-child(even){
   color: black;
+  margin-bottom: 30px;
 }
 
 /* Footer */
-.footer {
-  order: 5;
+footer {
   width: 60%;
   margin: 0 auto;
   margin-top: 20px;
