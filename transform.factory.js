@@ -16,7 +16,8 @@ app.controller('TakeHomeController', [
         $scope.NetTotal = calculateNetTotal(response.data);
 
         // 2) average net_total per guest for each employee
-        $scope.avgNetTotalPerEmployee = calculateAvgTotalPerEmployee(response.data);
+        $scope.avgPerEmployee = calculateAvgTotalPerEmployee(response.data);
+        console.log($scope.avgPerEmployee)
         // $scope.SalesTransactionData =
       });
   }]);
@@ -37,7 +38,7 @@ function calculateNetTotal(data){
 function calculateAvgTotalPerEmployee(data){
   var obj = {},
       result = {};
-      console.log(data);
+      // console.log(data);
 
   // create an object to hold
     // 1. net_total for each employee
@@ -80,15 +81,16 @@ function extractData(data, type){
 }
 
 function calculateAvg(data){
-  var res = {};
+  var res = [];
 
   for(var prop in data){
     // console.log(data[prop]);
     var id = prop;
     var avg = data[prop].total / data[prop].questCount;
 
-    res[id] = avg;
+    res.push([id, avg]);
   }
+
   return res;
 }
 

@@ -6,7 +6,7 @@
       <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular.min.js'></script>
   </head>
   <body ng-app="takeHomeApp">
-      <section ng-controller="TakeHomeController">
+      <section ng-controller="TakeHomeController" class="wrapper">
           <!-- <visualize-data></visualize-data> -->
         <header class="header flex-container">
 
@@ -18,10 +18,25 @@
 
           <div class="flex-box">
             <header>Avg Net Total (per employee)</header>
-            <main class="text-area">{{avgNetTotalPerEmployee | currency : symbol }}</main>
+            <main>{{avgNetTotalPerEmployee | currency : symbol }}</main>
             <footer class="box-footer"><span class="box-arrow">&#x25BC;</span></footer>
           </div>
         </header>
+
+        <section class="main">
+          <div class="text-area2" >
+            <div>
+              <ul ng-repeat=" employee in avgPerEmployee" class="bullet-points">
+                <li>
+                  Employee # <span>{{ employee[0] }}</span>
+                </li>
+                <li>
+                  Net Total: {{ employee[1] | currency : symbol : 2}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </section>
 
       <!-- <script src='plugins.js'></script> -->
