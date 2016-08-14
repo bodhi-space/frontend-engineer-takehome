@@ -35,7 +35,35 @@ function calculateNetTotal(data){
 }
 
 function calculateAvgTotalPerEmployee(data){
+  var obj = {},
+      result = {};
+      console.log(data);
 
+  // create an object to hold
+    // 1. net_total for each employee
+    // 2. Number of quests
+  for(var prop in data){
+    if(data[prop]['employee'] !== undefined){
+
+      var employeeID = data[prop]['employee'].id;
+      var netVal = data[prop]['net_total'].value;
+      var questCount = data[prop]['guest_count'];
+
+      if(!obj[employeeID]){
+        obj[employeeID] = {
+          total: netVal,
+          questCount: questCount
+        }
+      } else {
+        obj[employeeID].total += netVal;
+        obj[employeeID].questCount += questCount;
+      }
+    }
+  }
+
+  result = calculateAvg(obj);
+
+  return result;
 }
 
 function extractData(data, type){
@@ -48,10 +76,21 @@ function extractData(data, type){
       result.push(data[prop][type]);
     }
   }
-
   return result;
 }
 
+function calculateAvg(data){
+  var res = {};
+
+  for(var prop in data){
+    // console.log(data[prop]);
+    var id = prop;
+    var avg = data[prop].total / data[prop].questCount;
+
+    res[id] = avg;
+  }
+  return res;
+}
 
 
 
