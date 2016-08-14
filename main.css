@@ -1,0 +1,128 @@
+html, body {
+  height: 100%;
+}
+
+/*  Body wrapper */
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Flex Container for the 2 header boxes */
+.flex-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin-left: 20%;
+  -webkit-flex-flow: row wrap;
+}
+
+.flex-container header{
+  padding: 15px 0px 0px 10px;
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #099bca;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Boxes */
+.flex-box{
+  width: 400px;
+  height: 200px;
+  margin: 20px 2% 0px 2%;
+  position: relative;
+  border-radius: 3%;
+  text-align: center;
+  border: 1px solid #c1c1c1;
+}
+
+.text-area{
+  padding: 15px 0px 0px 10px;
+  margin-top: 10%;
+  text-align: center;
+  color: #9cc924;
+  font-size: 1.5em;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.box-footer {
+  background-color: #d3d3d3;
+  position: absolute;
+  bottom: 0;
+  height: 25px;
+  width: 100%;
+  border-radius:0px 0px 4px 4px;
+}
+
+.box-arrow{
+  font-size: 0.8em;
+  color: #484848;
+}
+
+.flex-box:hover{
+  border-color: #1278be;
+  box-shadow: 15px 15px 15px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  -webkit-transition: all 3s cubic-bezier(.25,.8,.25,1);
+  -moz-transition: all 3s cubic-bezier(.25,.8,.25,1);
+  -o-transition: all 3s cubic-bezier(.25,.8,.25,1);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.flex-box:hover .box-footer { background-color: #1278be; }
+.flex-box:hover .box-arrow{ color: white; }
+
+.active {
+  box-shadow: 15px 15px 15px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-color: #1278be;
+}
+
+/*  Text Area */
+.main {
+  margin-top: 20px;
+  padding: 0;
+  width: 50%;
+  align-self: center;
+}
+
+.text-area2{
+  background: #099bca;
+  height: 300px;
+  color: #484848;
+  margin: 20px 2% 0px 2%;
+  text-align: left;
+  border: 1px solid #c1c1c1;
+  padding-left: 30px;
+}
+
+.text-area2.hide{
+  display: none;
+}
+
+.bullet-points li{
+  font-size: 18px;
+  list-style-type: square;
+  // padding-top: 10px;
+  line-height: 20px;
+}
+
+.bullet-points li:nth-child(odd){
+  color: white;
+}
+
+.bullet-points li:nth-child(even){
+  color: black;
+  margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
