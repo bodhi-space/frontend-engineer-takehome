@@ -27,7 +27,6 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-1": "^6.5.0",
     "file-loader": "^0.10.0",
-    "html-loader": "^0.4.4",
     "react-svelte-components": "^1.0.0",
     "svelte": "^1.6.8",
     "svelte-loader": "^1.3.0",

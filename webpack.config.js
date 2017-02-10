@@ -11,10 +11,6 @@ module.exports = {
 				loader: 'babel-loader'
 			},
 			{
-				test: /\.html$/,
-				loader: 'html-loader'
-			},
-			{
 				test: /\.svelte$/,
 				exclude: /node_modules/,
 				loader: 'svelte-loader'

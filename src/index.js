@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Svelte from 'react-svelte-components';
-import HelloWorld from './svelte-components/HelloWorld/HelloWorld.svelte';
+import HelloWorld from './react-components/HelloWorld/HelloWorld';
 
 ReactDOM.render(
-	<Svelte src={HelloWorld} />
+	<HelloWorld />
 	,document.getElementById('root')
 );
