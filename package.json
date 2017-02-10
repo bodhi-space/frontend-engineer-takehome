@@ -6,7 +6,7 @@
   "scripts": {
     "unmod": "rm -rf ./node_modules",
     "build-svelte": "svelte compile --format iife ./src/svelte-components/HelloWorld/HelloWorld.svelte > ./src/svelte-components/HelloWorld/HelloWorld.js",
-    "dev": "webpack --config ./webpack.config.js --colors --progress"
+    "dev": "webpack --config ./webpack.config.js --colors --progress --watch"
   },
   "keywords": [
     "Svelte",
