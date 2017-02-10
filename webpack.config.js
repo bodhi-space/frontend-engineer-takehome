@@ -6,14 +6,24 @@ module.exports = {
 	module: {
 		loaders: [
 			{
-				test: /\.js$/,
-				exclude: ['node_modules/'],
+				test: /\.(svelte|js)$/,
+				exclude: /node_modules/,
 				loader: 'babel-loader'
+			},
+			{
+				test: /\.html$/,
+				loader: 'html-loader'
+			},
+			{
+				test: /\.svelte$/,
+				exclude: /node_modules/,
+				loader: 'svelte-loader'
 			},
 			{
 				test: /\.png|\.svg|\.ttf|\.woff2|\.woff|\.eot/,
 				loader: require.resolve("file-loader")
 			}
-		]
+		],
+		noParse: /\.svelte$/
 	}
 }
