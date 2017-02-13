@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HelloWorld from './react-components/HelloWorld/HelloWorld';
+import { Provider } from 'react-redux';
+import Main from './react-containers/Main';
+import Store from './store';
 
 ReactDOM.render(
-	<HelloWorld />
+	<Provider store={Store}>
+		<Main />
+	</Provider>
 	,document.getElementById('root')
 );
