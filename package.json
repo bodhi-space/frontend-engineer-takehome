@@ -1,15 +1,13 @@
 {
-  "name": "svelte-react",
+  "name": "echo-react-test",
   "version": "1.0.0",
-  "description": "Svelte and React Fusion",
+  "description": "Echo React Test",
   "main": "./src/index.js",
   "scripts": {
     "unmod": "rm -rf ./node_modules",
-    "build-svelte": "svelte compile --format iife ./src/svelte-components/HelloWorld/HelloWorld.svelte > ./src/svelte-components/HelloWorld/HelloWorld.js",
     "dev": "cross-env NODE_ENV=production webpack --config ./webpack.config.js --colors --progress --watch"
   },
   "keywords": [
-    "Svelte",
     "React"
   ],
   "author": "Uzair Rahim (http://uzairrahim.github.io)",
