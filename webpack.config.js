@@ -1,22 +1,19 @@
-module.exports = {
-	entry: './src/index.js',
-	output: {
-		filename: './dist/bundle.js',
-		library: ['MyLib'],
-		libraryTarget: 'umd'
-	},
-	module: {
-	loaders: [
-		{
-			test: /\.(js)$/,
-			exclude: /node_modules/,
-			loader: 'babel-loader'
+module.exports = [
+	// {
+	// 	entry: './src/index.js',
+	// 	output: {
+	// 		filename: './dist/bundle.js',
+	// 		library: ['MyLib'],
+	// 		libraryTarget: 'umd'
+	// 	}
+	// },
+	{
+		name: 'modal',
+		entry: './src/react-components/Modal/Modal.api.js',
+		output: {
+			filename: './dist/modal_bundle.js',
+			library: ['Modal'],
+			libraryTarget: 'umd'
 		},
-		{
-			test: /\.png|\.svg|\.ttf|\.woff2|\.woff|\.eot/,
-			loader: require.resolve("file-loader")
-		}
-	],
-		noParse: /\.svelte$/
-}
-}
+	}
+];
