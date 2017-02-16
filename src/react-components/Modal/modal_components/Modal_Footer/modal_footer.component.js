@@ -1,44 +1,32 @@
 import React from 'react';
+import ModalButtonComponent from '../Modal_Button/modal_button.component.js';
 
-var ModalFooterComponent = React.createClass({
+const ModalFooterComponent = ( {confirm_text, cancel_text, handleClickConfirm, handleClickCancel} ) => {
 
-	propTypes: {
-		confirm_text: React.propTypes.string,
-		cancel_text	: React.propTypes.string
-	},
+	return (
+		<div>
+			<ModalButtonComponent 
+				className='left'
+				buttonClassName='confirm-button'
+				callback={handleClickConfirm}
+				text={confirm_text}>
+			</ModalButtonComponent>
+			<ModalButtonComponent 
+				className='right'
+				buttonClassName='cancel-button'
+				callback={handleClickCancel}
+				text={cancel_text}>
+			</ModalButtonComponent>
+		</div>
+	);
 
-	constructor: function(props) {
-		super(props);
-		this.handleClickConfirm = this.handleClickConfirm.bind(this);
-		this.handleClickCancel 	= this.handleClickCancel.bind(this);
-	},
+};
 
-	handleClickConfirm: function(e) {
-		// TODO
-	},
-	handleClickCancel: function(e) {
-		// TODO
-	},
-
-	render() {
-		return (
-			<div className={this.props.className}>
-				<ModalButtonComponent 
-					className='left'
-					buttonClassName='confirm-button'
-					callback={this.handleClickConfirm}
-					text='SAVE'>
-				</ModalButtonComponent>
-				<ModalButtonComponent 
-					className='right'
-					buttonClassName='cancel-button'
-					callback={this.handleClickCancel}
-					text='CANCEL'>
-				</ModalButtonComponent>
-			</div>
-		);
-	}
-
-});
+ModalFooterComponent.propTypes = {
+	confirm_text		: React.PropTypes.string,
+	cancel_text			: React.PropTypes.string,
+	handleClickConfirm	: React.PropTypes.func,
+	handleClickCancel	: React.PropTypes.func
+};
 
 export default ModalFooterComponent;

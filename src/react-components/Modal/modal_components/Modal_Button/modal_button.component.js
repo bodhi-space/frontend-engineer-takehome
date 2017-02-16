@@ -4,7 +4,7 @@ var ModalButtonComponent = React.createClass({
 	
 	propTypes: {
 		buttonClassName	: React.PropTypes.string,
-		callback		: React.PropTypes.string,
+		callback		: React.PropTypes.func,
 		text			: React.PropTypes.string.isRequired
 	},
 

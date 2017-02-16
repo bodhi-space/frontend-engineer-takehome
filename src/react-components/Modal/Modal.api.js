@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ModalComponent from './Modal.component.js';
 // import Emitter from "./emitters/Emitter";
 
 export default {
@@ -11,14 +12,16 @@ export default {
     modal: {
 
         self: () => {
-
+            return ModalComponent;
         },
 
         new: (config) => {
 
-            return {
-                render: ''
-            };
+            // TODO
+
+            // return {
+            //     render: ''
+            // };
 
         }
 

@@ -1,3 +1,19 @@
-.modal {
-	
+/*$blue: #0ca2d0*/
+
+:local(.modal) {
+	background: red;
+}
+.modalHeader {
+	height: 40px;
+	width: 500px;
+	background: #0ca2d0;
+	/*background: $blue;*/
+}
+
+.show {
+	display: block;
+}
+
+.hide {
+	display: none;
 }

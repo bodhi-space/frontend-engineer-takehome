@@ -1,32 +1,22 @@
 import React from 'react';
 
-var ModalHeaderComponent = React.createClass({
+const ModalHeaderComponent = ({ headerClassName, title, handleClickExit }) => {
 
-	// TODO: need to scope css
-	propTypes: {
-		headerClassName	: React.PropTypes.string, // TODO: have default
-		title 			: React.PropTypes.string.isRequired
-	},
+	return (
+		<div className={headerClassName || 'modalHeader'}>
+			<span className="title">{title}</span>
+			<span className="x" onClick={handleClickExit}>EXIT</span>
+		</div>
 
-	constructor: function(props) {
-		super(props);
-		this.handleClick = this.handleClick.bind(this);
-	},
+	);
 
-	handleClick: function(e) {
-		// TODO: exit
-		// will need to communicate up to modal?
-	},
+};
 
-	render() {
-		return (
-			<div className={this.props.className || 'default-header'}>
-				<span className="title">{this.props.title}</span>
-				<span className="x" onClick={this.handleClick}>x</span>
-			</div>
-		);
-	}
+ModalHeaderComponent.propTypes = {
+	headerClassName	: React.PropTypes.string, // TODO: have default
+	title 			: React.PropTypes.string.isRequired,
+	handleClickExit	: React.PropTypes.func.isRequired
+};
 
-});
 
 export default ModalHeaderComponent;
