@@ -1,13 +1,12 @@
-/*$blue: #0ca2d0*/
+$blue: #0ca2d0;
 
-:local(.modal) {
+.modal {
 	background: red;
 }
 .modalHeader {
 	height: 40px;
 	width: 500px;
-	background: #0ca2d0;
-	/*background: $blue;*/
+	background: $blue;
 }
 
 .show {
