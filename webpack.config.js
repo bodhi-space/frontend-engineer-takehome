@@ -33,18 +33,21 @@
                         loader: "file"
                     },
                     {
-                        test: /\.css$/,
+                        test: /\.scss$/,
                         exclude: /node_modules/,
                         use: [
                             {
-                                loader: 'style-loader'
+                                loader: 'style-loader'  // creates style nodes from JS strings
                             },
                             {
-                                loader: 'css-loader',
+                                loader: 'css-loader',   // translates CSS into CommonJS
                                 options: {
                                     modules: true,
                                     localIdentName: 'echo-component-[name]-[hash:base64:5]'
                                 }
+                            },
+                            {
+                                loader: "sass-loader" // compiles Sass to CSS
                             }
                         ]
                     }
