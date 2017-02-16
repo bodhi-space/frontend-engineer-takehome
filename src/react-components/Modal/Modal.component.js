@@ -1,5 +1,5 @@
 import React from 'react';
-import css from './Modal.css';
+import styles from './Modal.scss';
 import ModalHeaderComponent from './modal_components/Modal_Header/modal_header.component.js';
 import ModalFooterComponent from './modal_components/Modal_Footer/modal_footer.component.js';
 
@@ -40,27 +40,27 @@ class Modal extends React.Component {
 
         if (this.state.show) {
             return (
-                <div className={`modal ${this.state.show ? 'show' : 'hide'}`}>
-                    <ModalHeaderComponent 
-                        headerClassName="modalHeader" 
-                        title={this.props.title}
-                        handleClickExit={this.handleClickExit}
-                    ></ModalHeaderComponent> 
+               <div className={`${styles.modal} ${this.state.show ? styles.show : styles.hide}`}>
+                   <ModalHeaderComponent
+                       headerClassName={styles.modalHeader}
+                       title={this.props.title}
+                       handleClickExit={this.handleClickExit}
+                   ></ModalHeaderComponent>
 
-                    <div>{this.props.text}</div>
+                   <div>{this.props.text}</div>
 
-                    <ModalFooterComponent 
-                        confirm_text={this.props.confirm_text}
-                        cancel_text={this.props.cancel_text}
-                        handleClickConfirm={this.internalHandleClickConfirm}
-                        handleClickCancel={this.internalHandleClickCancel}
-                    ></ModalFooterComponent>
-                </div>
+                   <ModalFooterComponent
+                       confirm_text={this.props.confirm_text}
+                       cancel_text={this.props.cancel_text}
+                       handleClickConfirm={this.internalHandleClickConfirm}
+                       handleClickCancel={this.internalHandleClickCancel}
+                   ></ModalFooterComponent>
+               </div>
             );
 
         } else {
             return (
-                <div className={`modal ${this.state.show ? 'show' : 'hide'}`}></div>
+                <div className={`${styles.modal} ${this.state.show ? styles.show : styles.hide}`}></div>
             );
         }
 
