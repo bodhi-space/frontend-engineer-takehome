@@ -1,0 +1,181 @@
+/*
+ * * * * * * * * * * * * * * * * * * *
+ * @mixins
+ * * * * * * * * * * * * * * * * * * *
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700|Roboto+Slab:400');
+
+@mixin roboto() {
+	font-family: "Roboto Slab", georgia, times, serif;
+}
+
+@mixin open-sans() {
+	font-family: "Open Sans", Verdana, Helvetica, Arial, sans-serif;
+}
+
+// Helper to clear inner floats
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// Slightly lighten a color
+@function tint($color, $percentage) {
+  @return mix($color, white, $percentage);
+}
+
+// Slightly darken a color
+@function shade($color, $percentage) {
+  @return mix($color, black, $percentage);
+}
+
+// Vertical align anything
+@mixin vertical-align {
+	display: block;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	transform-style: perserve-3d;
+}
+
+// REM font-size with pixel backup
+@mixin font-size($size){
+	font-size: ($size * 10) + px;
+	font-size: $size + rem;
+}
+
+// Box shadows
+@mixin box-shadow ($shadows...) {
+	box-shadow: $shadows;
+	-moz-box-shadow: $shadows;
+	-webkit-box-shadow: $shadows;
+}
+
+// Border Radius, all corners
+@mixin border-radius-all($cornervalue) {
+   -webkit-border-radius: $cornervalue;
+   -moz-border-radius: $cornervalue;
+   border-radius: $cornervalue;
+}
+
+// Border Radius, any configuration
+@mixin border-radius($topleft, $topright, $bottomright, $bottomleft) {
+   -webkit-border-radius: $topleft $topright $bottomright $bottomleft;
+   -moz-border-radius: $topleft $topright $bottomright $bottomleft;
+   border-radius: $topleft $topright $bottomright $bottomleft;
+}
+
+// Transition mixin
+@mixin transition($args) {
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-o-transition: $args;
+	transition: $args;
+}
+
+// Uppercase, 600, letter-spaced
+@mixin uppercase {
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+// Truncate text
+@mixin truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+// Make those words wrap, yo
+@mixin word-wrap() {
+	-ms-word-break: break-all;
+	word-wrap: hyphenate;
+	word-wrap: break-word;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+// Linear gradient (top to bottom)
+@mixin linear-gradient($from, $to) {
+	background-color: $to;
+	background-image:-moz-linear-gradient($from, $to);
+	background-image:-o-linear-gradient($from, $to);
+	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to));
+	background-image: -webkit-linear-gradient($from, $to);
+	background-image: -ms-linear-gradient($from, $to);
+	background-image: linear-gradient($from, $to);
+}
+
+// Remove browser default list styling (make sure to add your own)
+@mixin unstyled-list {
+	display: inline-block;
+	list-style: none;
+	list-style-type: none;
+	list-style-position: none;
+	border-bottom: none;
+	-moz-list-style: none none none;
+	-moz-margin-before: 0;
+	-moz-margin-after: 0;
+	-moz-margin-start: 0;
+	-moz-margin-end: 0;
+	-moz-padding-start: 0;
+	-moz-padding-end: 0;
+	-webkit-list-style: none none none;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	-webkit-padding-start: 0;
+	-webkit-padding-end: 0;
+	margin: 0;
+	padding: 0;
+
+	li { display: inline-block; }
+}
+
+// Remove browser default button styling (make sure to add your own)
+@mixin unstyled-button {
+	border: none;
+	border-image-source: none;
+	border-image-slice: none;
+	border-image-width: none;
+	border-image-outset: none;
+	border-image-repeat: none;
+	padding: 0;
+}
+
+// Prevent User Selection
+@mixin no-select() {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: -moz-none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+
+// Makes any element into a circle
+@mixin circle($diameter){
+	border-radius: 50%;
+	width: $diameter;
+	height: $diameter;
+}
+
+// Make a background image cover element
+@mixin background-image(){
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
