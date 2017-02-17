@@ -1,21 +1,18 @@
 import React from 'react';
+import styles from './modal_button.scss';
 
-var ModalButtonComponent = React.createClass({
-	
-	propTypes: {
-		buttonClassName	: React.PropTypes.string,
-		callback		: React.PropTypes.func,
-		text			: React.PropTypes.string.isRequired
-	},
+const ModalButtonComponent = ( {buttonClassName, callback, text} ) => {
+	return (
+		<button className={buttonClassName || styles.button} onClick={callback}>
+			{text}
+		</button>
+	);
+};
 
-	render() {
-		return (
-			<div className={this.props.className || 'default-button'} onClick={this.props.callback}>
-				{this.props.text}
-			</div>
-		);
-	}
-
-});
+ModalButtonComponent.propTypes = {
+	buttonClassName	: React.PropTypes.string,
+	callback		: React.PropTypes.func,
+	text			: React.PropTypes.string.isRequired
+};
 
 export default ModalButtonComponent;

@@ -17,9 +17,6 @@ class Modal extends React.Component {
         this.internalHandleClickCancel  = this.internalHandleClickCancel.bind(this);
     }
 
-    // TODO: handleClickConfirm, handleClickCancel needs to call handleClickExit
-
-
     handleClickExit(e) {
         this.setState({ show: false });
         console.log('closing modal!', e);
@@ -40,22 +37,22 @@ class Modal extends React.Component {
 
         if (this.state.show) {
             return (
-               <div className={`${styles.modal} ${this.state.show ? styles.show : styles.hide}`}>
-                   <ModalHeaderComponent
-                       headerClassName={styles.modalHeader}
-                       title={this.props.title}
-                       handleClickExit={this.handleClickExit}
-                   ></ModalHeaderComponent>
+                 <div className={`${styles.modal} ${this.state.show ? styles.show : styles.hide}`}>
+                     <ModalHeaderComponent
+                         headerClassName={styles.modalHeaderPosition}
+                         title={this.props.title}
+                         handleClickExit={this.handleClickExit}>
+                     </ModalHeaderComponent>
 
-                   <div>{this.props.text}</div>
+                     <div className={styles.textBlock}>{this.props.text}</div>
 
-                   <ModalFooterComponent
-                       confirm_text={this.props.confirm_text}
-                       cancel_text={this.props.cancel_text}
-                       handleClickConfirm={this.internalHandleClickConfirm}
-                       handleClickCancel={this.internalHandleClickCancel}
-                   ></ModalFooterComponent>
-               </div>
+                     <ModalFooterComponent
+                         confirm_text={this.props.confirm_text}
+                         cancel_text={this.props.cancel_text}
+                         handleClickConfirm={this.internalHandleClickConfirm}
+                         handleClickCancel={this.internalHandleClickCancel}>
+                     </ModalFooterComponent>
+                 </div>
             );
 
         } else {

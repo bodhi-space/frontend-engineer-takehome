@@ -1,0 +1,16 @@
+@import "../../../../../assets/_color.scss";
+
+.modalHeader {
+	background: $blue;
+	size: 20px;
+}
+
+.title {
+	float: left;
+	color: white;
+}
+
+.exit {
+	float: right;
+	color: $dark-gray;
+}

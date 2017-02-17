@@ -10,11 +10,11 @@ app.controller('appCtrl', function($scope) {
         confirm_text: 'OK',
         cancel_text : 'CANCEL',
         handleClickConfirm: function(e) {
-        	console.log('CONFIRM', e);
-            
+            console.log('CONFIRM', e);
+
         },
         handleClickCancel: function(e) {
-        	console.log('CANCEL', e);
+            console.log('CANCEL', e);
         }
     };
 

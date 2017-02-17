@@ -1,18 +1,25 @@
-$blue: #0ca2d0;
+$padding: 20px;
 
 .modal {
 	background: red;
-}
-.modalHeader {
-	height: 40px;
 	width: 500px;
-	background: $blue;
 }
 
+// should go in utils
 .show {
 	display: block;
 }
 
 .hide {
 	display: none;
+}
+
+.modalHeaderPosition {
+	height: 25px;
+	padding: $padding;
+}
+
+.textBlock {
+	height: 200px;
+	padding: $padding;
 }

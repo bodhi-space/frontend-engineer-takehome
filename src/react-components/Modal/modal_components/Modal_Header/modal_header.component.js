@@ -1,11 +1,12 @@
 import React from 'react';
+import styles from './modal_header.scss';
 
 const ModalHeaderComponent = ({ headerClassName, title, handleClickExit }) => {
 
 	return (
-		<div className={headerClassName || 'modalHeader'}>
-			<span className="title">{title}</span>
-			<span className="x" onClick={handleClickExit}>EXIT</span>
+		<div className={`${headerClassName}  ${styles.modalHeader}`}>
+			<span className={styles.title}>{title}</span>
+			<span className={styles.exit} onClick={handleClickExit}>X</span>
 		</div>
 
 	);
