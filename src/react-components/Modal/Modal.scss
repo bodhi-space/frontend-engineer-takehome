@@ -1,7 +1,15 @@
-$padding: 20px;
+@import "../../../assets/_mixins.scss";
+@import "../../../assets/_color.scss";	// needed for _buttons.scss...
+
+
+$padding: 17px;			// NEED TO ABSTRACT - also in modal_header...!
+$header_height: 25px;
+$border_radius: 5px;
 
 .modal {
-	background: red;
+	@include open-sans();
+	@include border-radius-all(5px);
+	background: white;
 	width: 500px;
 }
 
@@ -9,17 +17,17 @@ $padding: 20px;
 .show {
 	display: block;
 }
-
 .hide {
 	display: none;
 }
 
 .modalHeaderPosition {
-	height: 25px;
-	padding: $padding;
+	@include border-radius($border_radius, $border_radius, 0, 0);
+	height: $header_height;
+	line-height: $header_height;
 }
 
 .textBlock {
-	height: 200px;
 	padding: $padding;
+	color: $gray;
 }

@@ -1,8 +1,12 @@
-@import "../../../../../assets/_color.scss";
+@import "../../../../../assets/_color.scss";	// needed for _buttons.scss...
+
+$padding: 17px;
+$header_font_size: 20px;
 
 .modalHeader {
 	background: $blue;
-	size: 20px;
+	padding: $padding;
+	font-size: $header_font_size;
 }
 
 .title {
@@ -13,4 +17,7 @@
 .exit {
 	float: right;
 	color: $dark-gray;
+	cursor: pointer;
+	// padding: $padding;
+	// @include button($blue, $dark-gray);
 }

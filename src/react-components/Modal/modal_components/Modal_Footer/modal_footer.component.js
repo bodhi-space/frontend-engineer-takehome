@@ -2,17 +2,17 @@ import React from 'react';
 import ModalButtonComponent from '../Modal_Button/modal_button.component.js';
 import styles from './modal_footer.scss';
 
-const ModalFooterComponent = ( {confirm_text, cancel_text, handleClickConfirm, handleClickCancel} ) => {
+const ModalFooterComponent = ( {footerClassName, confirm_text, cancel_text, handleClickConfirm, handleClickCancel} ) => {
 
 	return (
-		<div className={styles.modalFooterPosition}>
+		<div className={`${footerClassName} ${styles.modalFooter}`}>
 			<ModalButtonComponent 
-				buttonClassName='confirmButton'
+				buttonClassName={styles.confirmButton}
 				callback={handleClickConfirm}
 				text={confirm_text}>
 			</ModalButtonComponent>
 			<ModalButtonComponent 
-				buttonClassName='cancelButton'
+				buttonClassName={styles.cancelButton}
 				callback={handleClickCancel}
 				text={cancel_text}>
 			</ModalButtonComponent>

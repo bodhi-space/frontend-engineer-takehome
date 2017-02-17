@@ -5,7 +5,7 @@ app.value('ModalComponent', Modal.default.modal.self());
 app.controller('appCtrl', function($scope) {
 
     $scope.props =  {
-        text        : 'Example text goes here...',
+        text        : 'Example text goes here. Something really long and informative would be great.',
         title       : 'Title of My Header',
         confirm_text: 'OK',
         cancel_text : 'CANCEL',

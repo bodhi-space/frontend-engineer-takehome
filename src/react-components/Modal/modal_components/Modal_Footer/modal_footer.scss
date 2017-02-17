@@ -1,11 +1,30 @@
+@import "../../../../../assets/_mixins.scss";	// needed for _buttons.scss...
+@import "../../../../../assets/_color.scss";	// needed for _buttons.scss...
+@import "../../../../../assets/_buttons.scss";
+
+$padding: 17px;
+$button_height: 40px;
+$space_between_buttons: 10px;
+
 .modalFooter {
-
+	border-top: 1px solid #ccc;
+	padding: $padding 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	align-content: space-around;
+	margin: 0 $padding;
 }
 
-.leftButtonPosition {
-
+.confirmButton {
+	@include button($blue, $white);
+	height: $button_height;
+	margin: 0;
 }
 
-.rightButtonPosition {
-
+.cancelButton {
+	border: 1px solid $blue !important;
+	@include button($white, $blue);
+	margin: 0 0 0 $space_between_buttons;
+	height: $button_height;
 }

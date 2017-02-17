@@ -6,7 +6,7 @@ const ModalHeaderComponent = ({ headerClassName, title, handleClickExit }) => {
 	return (
 		<div className={`${headerClassName}  ${styles.modalHeader}`}>
 			<span className={styles.title}>{title}</span>
-			<span className={styles.exit} onClick={handleClickExit}>X</span>
+			<span className={styles.exit} onClick={handleClickExit}>x</span>
 		</div>
 
 	);
