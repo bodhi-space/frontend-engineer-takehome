@@ -1,22 +1,26 @@
 import React from 'react';
+import ThemeHOCFactory from '../../../ThemeHOC/Theme.HOC.js';
 import ModalButtonComponent from '../Modal_Button/modal_button.component.js';
-import styles from './modal_footer.scss';
+import styles from './_modal_footer.scss';
 
-const ModalFooterComponent = ( {footerClassName, confirm_text, cancel_text, handleClickConfirm, handleClickCancel} ) => {
+const ModalFooterComponent = ( {footerClassName, confirm_text, cancel_text, handleClickConfirm, handleClickCancel, theme} ) => {
+
+	let ThemedButtonComponent = ThemeHOCFactory(theme)(ModalButtonComponent);
 
 	return (
 		<div className={`${footerClassName} ${styles.modalFooter}`}>
-			<ModalButtonComponent 
+			<ThemedButtonComponent 
 				buttonClassName={styles.confirmButton}
 				callback={handleClickConfirm}
 				text={confirm_text}>
-			</ModalButtonComponent>
+			</ThemedButtonComponent>
 			<ModalButtonComponent 
 				buttonClassName={styles.cancelButton}
 				callback={handleClickCancel}
 				text={cancel_text}>
 			</ModalButtonComponent>
 		</div>
+
 	);
 
 };

@@ -1,18 +1,30 @@
 import React from 'react';
-import styles from './modal_button.scss';
 
-const ModalButtonComponent = ( {buttonClassName, callback, text} ) => {
-	return (
-		<button className={buttonClassName || styles.button} onClick={callback}>
-			{text}
-		</button>
-	);
+const ModalButtonComponent = ( {buttonClassName, callback, text, theme} ) => {
+
+    // Theming
+    let style = {};
+    if (theme) {
+        style = {
+            background: theme.primary_color
+        };
+    }
+
+    return (
+        <button 
+            style={style}
+            className={buttonClassName} 
+            onClick={callback}>
+            {text}
+        </button>
+    );
 };
 
 ModalButtonComponent.propTypes = {
-	buttonClassName	: React.PropTypes.string,
-	callback		: React.PropTypes.func,
-	text			: React.PropTypes.string.isRequired
+    buttonClassName : React.PropTypes.string,
+    callback        : React.PropTypes.func,
+    text            : React.PropTypes.string.isRequired,
+    theme           : React.PropTypes.object
 };
 
 export default ModalButtonComponent;

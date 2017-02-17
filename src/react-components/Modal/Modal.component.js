@@ -1,7 +1,9 @@
 import React from 'react';
-import styles from './Modal.scss';
+import styles from './_Modal.scss';
 import ModalHeaderComponent from './modal_components/Modal_Header/modal_header.component.js';
 import ModalFooterComponent from './modal_components/Modal_Footer/modal_footer.component.js';
+import ThemeHOCFactory from '../ThemeHOC/Theme.HOC.js';
+
 
 class Modal extends React.Component {
 
@@ -35,26 +37,31 @@ class Modal extends React.Component {
 
     render() {
 
+        // Create themed components
+        let ThemedModalHeaderComponent = ThemeHOCFactory(this.props.theme)(ModalHeaderComponent);
+        let ThemedModalFooterComponent = ThemeHOCFactory(this.props.theme)(ModalFooterComponent);
+
+
         if (this.state.show) {
             return (
                 <div className={`${styles.modal} ${this.state.show ? styles.show : styles.hide}`}>
-                    <ModalHeaderComponent
+                    <ThemedModalHeaderComponent
                         headerClassName={styles.modalHeaderPosition}
                         title={this.props.title}
                         handleClickExit={this.handleClickExit}>
-                    </ModalHeaderComponent>
+                    </ThemedModalHeaderComponent>
 
                     <div className={styles.textBlock}>
                         {this.props.text}
                     </div>
 
-                    <ModalFooterComponent
+                    <ThemedModalFooterComponent
                         footerClassName={styles.modalFooterPosition}
                         confirm_text={this.props.confirm_text}
                         cancel_text={this.props.cancel_text}
                         handleClickConfirm={this.internalHandleClickConfirm}
                         handleClickCancel={this.internalHandleClickCancel}>
-                    </ModalFooterComponent>
+                    </ThemedModalFooterComponent>
                 </div>
             );
 

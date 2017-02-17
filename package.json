@@ -37,6 +37,7 @@
     "eslint-plugin-react": "^6.9.0",
     "eslint-plugin-standard": "^2.0.1",
     "file-loader": "^0.10.0",
+    "lodash": "^4.17.4",
     "node-sass": "^4.5.0",
     "react-redux": "^5.0.2",
     "react-svelte-components": "^1.0.0",

@@ -1,11 +1,21 @@
 import React from 'react';
-import styles from './modal_header.scss';
+import styles from './_modal_header.scss';
+import _ from 'lodash';
 
-const ModalHeaderComponent = ({ headerClassName, title, handleClickExit }) => {
+const ModalHeaderComponent = ( {headerClassName, title, handleClickExit, theme} ) => {
+
+	// Theming
+	let style = {};
+	if (theme) {
+		style = {
+			background	: _.get(theme, 'primary_color'),
+			color		: _.get(theme, 'secondary_color')
+		};
+	}
 
 	return (
-		<div className={`${headerClassName}  ${styles.modalHeader}`}>
-			<span className={styles.title}>{title}</span>
+		<div style={style} className={`${headerClassName}  ${styles.modalHeader}`}>
+			<span style={style} className={styles.title}>{title}</span>
 			<span className={styles.exit} onClick={handleClickExit}>x</span>
 		</div>
 

@@ -1,6 +1,5 @@
-@import "../../../../../assets/_color.scss";	// needed for _buttons.scss...
+@import '../../_Modal.scss';
 
-$padding: 17px;
 $header_font_size: 20px;
 
 .modalHeader {
@@ -18,6 +17,4 @@ $header_font_size: 20px;
 	float: right;
 	color: $dark-gray;
 	cursor: pointer;
-	// padding: $padding;
-	// @include button($blue, $dark-gray);
 }

@@ -1,8 +1,22 @@
+import theme from './theme.js';
+
+// Create app
 var app = angular.module('myApp', ['react']);
 
-app.value('ModalComponent', Modal.default.modal.self());
+// Theming:
+const USE_THEME = false;
+if (USE_THEME) {
+    app.value('ModalComponent', Modal.default.modal.self({theme}));
 
+} else {
+    app.value('ModalComponent', Modal.default.modal.self());
+}
+
+// Create controller
 app.controller('appCtrl', function($scope) {
+
+    // NOTE: container props are applied at runtime
+        // those specified by the modal_bundle.js are applied at build time
 
     $scope.props =  {
         text        : 'Example text goes here. Something really long and informative would be great.',

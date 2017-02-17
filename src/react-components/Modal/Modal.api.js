@@ -1,18 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ModalComponent from './Modal.component.js';
+import ThemeHOCFactory from '../ThemeHOC/Theme.HOC.js';
 // import Emitter from "./emitters/Emitter";
 
 export default {
 
-    config: function (config) {
-
-    },
-
     modal: {
+        setConfig: function (config) {
+            // TODO: make this work
+            this.config = config || {};
+        },
+        self: (config) => {
+            config      = config || {};
+            let theme   = config.theme;
+            
+            return ThemeHOCFactory(theme)(ModalComponent);
 
-        self: () => {
-            return ModalComponent;
+            // return ModalComponent;
         },
 
         new: (config) => {

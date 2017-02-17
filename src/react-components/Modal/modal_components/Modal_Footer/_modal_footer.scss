@@ -1,8 +1,5 @@
-@import "../../../../../assets/_mixins.scss";	// needed for _buttons.scss...
-@import "../../../../../assets/_color.scss";	// needed for _buttons.scss...
-@import "../../../../../assets/_buttons.scss";
+@import "../../_Modal.scss";
 
-$padding: 17px;
 $button_height: 40px;
 $space_between_buttons: 10px;
 

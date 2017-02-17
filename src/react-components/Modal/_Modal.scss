@@ -1,8 +1,10 @@
-@import "../../../assets/_mixins.scss";
-@import "../../../assets/_color.scss";	// needed for _buttons.scss...
+@import "../../../assets/_mixins.scss";		// Needed for buttons
+@import "../../../assets/_color.scss";		// Needed for buttons
+@import "../../../assets/_buttons.scss";
 
 
-$padding: 17px;			// NEED TO ABSTRACT - also in modal_header...!
+// vars for modal and its subcomponents
+$padding: 17px;
 $header_height: 25px;
 $border_radius: 5px;
 
@@ -13,7 +15,6 @@ $border_radius: 5px;
 	width: 500px;
 }
 
-// should go in utils
 .show {
 	display: block;
 }
@@ -28,6 +29,7 @@ $border_radius: 5px;
 }
 
 .textBlock {
-	padding: $padding;
+	padding: 25px $padding;
 	color: $gray;
+	line-height: 1.5;
 }
