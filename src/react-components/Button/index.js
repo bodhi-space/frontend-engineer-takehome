@@ -10,12 +10,9 @@ export default {
 
     // Use one or the other:
     getClass: (config) => {                 // react, ngreact
-        // TODO: make theme-able
-        // config      = config || {};
-        // let theme   = config.theme;
-        // return ThemeHOCFactory(theme)(ButtonComponent);
-
-        return ButtonComponent;
+        config      = config || {};
+        let theme   = config.theme;
+        return ThemeHOCFactory(theme)(ButtonComponent);
 
     },
     new: (config) => {                  // other

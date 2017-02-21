@@ -5,14 +5,16 @@ var app = angular.module('myApp', ['react']);
 
 // Theming:
 const USE_THEME = false;
+// const USE_THEME = true;
 if (USE_THEME) {
     app.value('ModalComponent', EchoModal.default.getClass({theme}));
+    app.value('ButtonComponent', EchoButton.default.getClass({theme}));
 
 } else {
     app.value('ModalComponent', EchoModal.default.getClass());
+    app.value('ButtonComponent', EchoButton.default.getClass());
 }
 
-app.value('ButtonComponent', EchoButton.default.getClass());
 
 // Create controller
 app.controller('appCtrl', function($scope) {
@@ -35,7 +37,7 @@ app.controller('appCtrl', function($scope) {
     };
 
     $scope.button_props =  {
-        label: 'BUTTON'
+        text: 'BUTTON'
     };
 
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ModalButtonComponent = ( {buttonClassName, callback, text, theme} ) => {
+const ModalButtonComponent = ( {buttonClassName, onClick, text, isDisabled, theme} ) => {
 
     // Theming
     let style = {};
@@ -14,7 +14,8 @@ const ModalButtonComponent = ( {buttonClassName, callback, text, theme} ) => {
         <button 
             style={style}
             className={buttonClassName} 
-            onClick={callback}>
+            onClick={onClick}
+            disabled={isDisabled}>
             {text}
         </button>
     );
@@ -22,8 +23,9 @@ const ModalButtonComponent = ( {buttonClassName, callback, text, theme} ) => {
 
 ModalButtonComponent.propTypes = {
     buttonClassName : React.PropTypes.string,
-    callback        : React.PropTypes.func,
+    onClick         : React.PropTypes.func,
     text            : React.PropTypes.string.isRequired,
+    isDisabled      : React.PropTypes.bool,
     theme           : React.PropTypes.object
 };
 

@@ -11,12 +11,12 @@ const ModalFooterComponent = ( {footerClassName, confirm_text, cancel_text, hand
 		<div className={`${footerClassName} ${styles.modalFooter}`}>
 			<ThemedButtonComponent 
 				buttonClassName={styles.confirmButton}
-				callback={handleClickConfirm}
+				onClick={handleClickConfirm}
 				text={confirm_text}>
 			</ThemedButtonComponent>
 			<ModalButtonComponent 
 				buttonClassName={styles.cancelButton}
-				callback={handleClickCancel}
+				onClick={handleClickCancel}
 				text={cancel_text}>
 			</ModalButtonComponent>
 		</div>

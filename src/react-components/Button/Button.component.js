@@ -1,42 +1,33 @@
 import React from 'react';
-import Styles from './_Button.scss';
+import styles from './_Button.scss';
 
-var ButtonComponent = React.createClass({
-    propTypes: {
-        label: React.PropTypes.string,
-        type: React.PropTypes.string,
-        size: React.PropTypes.string,
-        onClick: React.PropTypes.func,
-        isDisabled: React.PropTypes.bool
-    },
-    getInitialState() {
-        return {
-            isDisabled: false
+const ModalButtonComponent = ( {buttonClassName, onClick, text, isDisabled, theme} ) => {
+
+    // Theming
+    let style = {};
+    if (theme) {
+        style = {
+            background: theme.primary_color
         };
-    },
-    defaultProps: {
-        type: 'primary'
-    },
-    componentWillReceiveProps(props) {
-        this.setState({
-            isDisabled: props.isDisabled
-        });
-    },
-	render() {
-        var classes = [
-            Styles.button,
-            this.props.type === 'secondary' ? Styles.secondary : '',
-            this.props.size === 'large' ? Styles.large : ''
-        ];
+    }
 
-		return (
-            <button  
-                className={classes.join(' ')} 
-                onClick={this.props.onClick}
-                disabled={this.state.isDisabled}
-            >{this.props.label}</button>
-        );
-	}
-});
+    return (
+        <button 
+            style={style}
+            className={buttonClassName || styles.button} 
+            onClick={onClick}
+            disabled={isDisabled}>
+            {text}
+        </button>
+    );
+};
 
-export default ButtonComponent;
+ModalButtonComponent.propTypes = {
+    buttonClassName : React.PropTypes.string,
+    onClick         : React.PropTypes.func,
+    text            : React.PropTypes.string.isRequired,
+    isDisabled      : React.PropTypes.bool,
+    theme           : React.PropTypes.object
+};
+
+export default ModalButtonComponent;
