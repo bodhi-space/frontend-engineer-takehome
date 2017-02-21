@@ -1,37 +1,159 @@
-# Proposed Structure
+# Echo Component Library
 
-## SCSS
+## Example
 
-### Component
+###For react app.
 
-#### Creating Component
+```
+    var ReactDOM    = require('react-dom');
+    var EchoButton  = require('echo-component-library/Button').getClass();
 
-1. The className of the inner component div - ex. `<ButtonComponent buttonClassName={/* HERE */} buttonClassName={override_class}></ButtonComponent>`
-    * specify positioning and size of component
-    * override default styles
-    
-2. The default className of the inner component dev - ex. `<button className={this.props.buttonClassName /* HERE */}> <button>`
-    * default styling (inside the border)
-    * Its own inherent styling
-    * Styling of its different variants/modifiers/states
-    * Styling of its descendants (i.e. children) and/or siblings (if necessary)
+    ReactDOM.render(<EchoButton />, document.getElementById('app')
+```
 
-3. The parent component should house shared vars and style sheets for its child components; this way we only have to import the parent component style sheet for the child components.
+###For angular app.
 
-NOTE: the public component should not expose className so that fish can change the style?
-    * what about sizing and positioning? do that at the ng-react level?
+in index.html
+```
+    <html ng-app="myApp">
 
-### Main
+	<head>
+		<title>React Component Test</title>
+	</head>
 
-* Will not assume that fish will have included it.
-* Components themselves will include what they need from the assets/.
+	<body ng-controller="appCtrl" style="background: darkgray">
+		<react-component name="ButtonComponent" props="props" watch-depth="reference"></react-component>
+	</body>
 
-### Theming
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="../node_modules/react/dist/react.js"></script>	
+	<script src="../node_modules/react-dom/dist/react-dom.js"></script>	
+	<script src="../node_modules/ngreact/ngReact.js"></script>
 
-* If a component is to be themed, will need to wrap the component with the ThemeHOCFactory.
-* The public component's api should pass the theme in.
-* Every sub component should have a theme prop which we can use to theme the component.
 
-TODO: set up a config to pass in stuff like theme
+	<script src="./app.js"></script>
+    </html>
+```
 
-### Questions
+in app.js
+```
+    var EchoButton = require('echo-component-library/Button').self()
+
+    // Create app
+    var app = angular.module('myApp', ['react']);
+
+    app.value('ButtonComponent', EchoButton);
+
+    // Create controller
+    app.controller('appCtrl', function($scope) {
+
+        $scope.props =  {
+            propOne: 'value'
+        };
+
+    }); 
+```
+
+###Non-framework specific implementation.
+
+```
+    var EchoButton = require('echo-component-library/Button');
+
+    var buttonInstance = EchoButton.new({
+        selector: '#button-one'
+    });
+
+    var props = {
+        propOne: "value"
+    };
+
+    buttonInstance.render(props);
+```
+
+## Setup
+
+### Set up artifactory
+
+Add a .npmrc file to your user root (~/) with the following credentials 
+
+```
+    registry=http://rbcplatform.artifactoryonline.com/rbcplatform/api/npm/npm-virtual
+    _auth=cmJjYWdlbnQ6QVA4WUJiUDJGdDhRa01iM3MyN3Y3VTdWOWRO
+    always-auth=true
+    email=first.last@redbookconnect.com
+```
+### Install
+
+`yarn add echo-component-library`
+
+or 
+
+`npm install echo-component-library`
+
+## Usage
+
+`var ButtonFactory = require('echo-component-library/Button)`
+
+##Component API
+
+Each component has public interface that can be used in two mutually exclusive ways.   
+
+1. Return class
+
+`var Button = ButtonFactory.getClass(config)`
+
+`ReactDOM.render(<Button />, document.getElementById('app')`
+
+###Parameters 
+
+*config*    - theme - Object - An object to inject custom styles overrides. 
+
+2. Return Instances
+
+`var button = ButtonFactory.new(config)`
+
+###Parameters 
+
+*config*    - config.theme - Object - An object to inject custom styles overrides. 
+            - config.selector - String - The selector of the DOM element that will render the component. 
+
+Render Instances
+
+`button.render(props)`
+
+###Parameters 
+
+*props*  - Object - An object to hold component props. 
+
+## Theming
+
+Create theme.
+
+```
+    module.exports = {
+        primary_color  : 'red',
+        secondary_color: 'blue'
+    };
+```
+
+Pass in theme to instance.
+
+```
+    var theme           = require('./theme.js);
+    var ButtonFactory   = require('echo-component-library/Button);
+
+    var Button = ButtonFactory.getClass({
+        theme: theme
+    });
+
+    //or
+
+    var button = ButtonFactory.new({
+        selector: '#button-one',
+        theme: theme
+    }).render(
+        {
+            //props
+        }
+    );
+```
