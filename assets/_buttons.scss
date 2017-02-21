@@ -1,0 +1,80 @@
+/*
+ * * * * * * * * * * * * * * * * * * *
+ * BUTTONS
+ * * * * * * * * * * * * * * * * * * *
+ */
+
+@mixin button-style() {
+  @include unstyled-button();
+  @include open-sans();
+  display: inline-block;
+  width: auto;
+  height: 32px;
+  line-height: 32px;
+  @include font-size(1.2);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 15px;
+  text-decoration: none;
+  @include border-radius-all(4px);
+  cursor: pointer;
+
+  &:focus { outline: 0; }
+
+  &:disabled,
+  &[disabled=disabled] {
+    opacity: 0.4;
+
+    &:hover,
+    &:active { cursor: default; }
+  }
+}
+
+@mixin button($background-color, $text-color) {
+  @include button-style();
+  background: $background-color;
+  color: $text-color;
+  margin: 0 10px 10px 0;
+
+  &:hover {
+    background: tint($background-color, 70);
+    text-decoration: none;
+  }
+
+  &:active,
+  &.selected { background: shade($background-color, 80); }
+
+  &:disabled,
+  &[disabled=disabled] {
+    &:hover,
+    &:active { background: tint($background-color, 70); }
+  }
+}
+
+.button {
+  @include button($blue, $white);
+
+  &.secondary {
+    @include button($white, $blue);
+    border: 1px solid $blue;
+    line-height: 30px;
+
+    &:hover {
+      background: $blue;
+      color: $white;
+    }
+
+    &:active {
+      background: shade($blue, 80);
+    }
+  }
+
+  &.large {
+    height: 40px;
+    line-height: 40px;
+    @include font-size(1.4);
+
+    &.secondary { line-height: 38px; }
+  }
+}

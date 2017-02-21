@@ -1,0 +1,20 @@
+@import '../../_Modal.scss';
+
+$header_font_size: 20px;
+
+.modalHeader {
+	background: $blue;
+	padding: $padding;
+	font-size: $header_font_size;
+}
+
+.title {
+	float: left;
+	color: white;
+}
+
+.exit {
+	float: right;
+	color: $dark-gray;
+	cursor: pointer;
+}

@@ -1,0 +1,65 @@
+/*~~~~~~~~~~~ GRID ~~~~~~~~~~~~~~*/
+
+// Media Queries
+@mixin breakpoint($point) {
+	@if $point == extra-large {
+		@media (max-width: 1200px) { @content; }
+	} @else if $point == large {
+		@media (max-width: 1000px) { @content; }
+	} @else if $point == medium {
+		@media (max-width: 800px) { @content; }
+	} @else if $point == medium-step {
+		@media (max-width: 600px) { @content; }
+	} @else if $point == small {
+		@media (max-width: 400px)  { @content; }
+	} @else if $point == dang-small {
+		@media (max-width: 380px)  { @content; }
+	}
+}
+
+// Media Query Syntax: // @include breakpoint(small) { width: 60%; }
+
+// drop in a div with this class to visualize your breakpoints as you scale the page
+.breakpoint-tester {
+	position: fixed;
+	top: 50px;
+	right: 0;
+	background: $orange;
+	font-size: 20px;
+	padding: 10px 15px;
+	z-index: 1001;
+
+	&:before { content: 'default'; }
+
+	@include breakpoint(extra-large) { &:before { content: 'extra-large'; } }
+	@include breakpoint(large) { &:before { content: 'large'; } }
+	@include breakpoint(medium) { &:before { content: 'medium'; } }
+	@include breakpoint(medium-step) { &:before { content: 'medium-step'; } }
+	@include breakpoint(small) { &:before { content: 'small'; } }
+	@include breakpoint(dang-small) { &:before { content: 'dang-small'; } }
+}
+
+
+/*
+ * * * * * * * * * * * * * * * * * * *
+ * GRID
+ * * * * * * * * * * * * * * * * * * *
+ */
+
+.container {
+	position: relative;
+	display: block;
+	width: 100%;
+	max-width: 1200px;
+	height: auto;
+	margin: 0 auto;
+	@include clearfix();
+	padding: 0 15px;
+}
+
+.column {
+	float: left;
+	width: 100%;
+	padding: 0 15px;
+	@include clearfix();
+}
