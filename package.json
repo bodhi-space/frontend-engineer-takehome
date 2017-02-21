@@ -1,8 +1,7 @@
 {
-  "name": "echo-react-test",
+  "name": "echo-component-library",
   "version": "1.0.0",
-  "description": "Echo React Test",
-  "main": "./src/index.js",
+  "description": "Echo Component Library",
   "scripts": {
     "unmod": "rm -rf ./node_modules",
     "dev": "cross-env NODE_ENV=production webpack --config ./webpack.config.js --colors --progress --watch"

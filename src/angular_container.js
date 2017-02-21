@@ -6,13 +6,13 @@ var app = angular.module('myApp', ['react']);
 // Theming:
 const USE_THEME = false;
 if (USE_THEME) {
-    app.value('ModalComponent', Components.default.modal.self({theme}));
+    app.value('ModalComponent', EchoModal.default.self({theme}));
 
 } else {
-    app.value('ModalComponent', Components.default.modal.self());
+    app.value('ModalComponent', EchoModal.default.self());
 }
 
-app.value('ButtonComponent', Components.default.button.self());
+app.value('ButtonComponent', EchoButton.default.self());
 
 // Create controller
 app.controller('appCtrl', function($scope) {

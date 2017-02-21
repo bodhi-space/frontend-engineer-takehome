@@ -9,7 +9,7 @@ $header_height: 25px;
 $border_radius: 5px;
 
 .modal {
-	@include open-sans();
+	@include roboto();
 	@include border-radius-all(5px);
 	background: white;
 	width: 500px;
