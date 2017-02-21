@@ -7,10 +7,8 @@ import ThemeHOCFactory from '../ThemeHOC/Theme.HOC.js';
 export default {
 
     modal: {
-        setConfig: function (config) {
-            // TODO: make this work
-            this.config = config || {};
-        },
+
+        // Use one or the other:
         self: (config) => {
             config      = config || {};
             let theme   = config.theme;
@@ -19,14 +17,21 @@ export default {
 
             // return ModalComponent;
         },
-
         new: (config) => {
+            // TODO: test!
 
-            // TODO
+            config      = config || {};
+            let theme   = config.theme;
 
-            // return {
-            //     render: ''
-            // };
+            let ThemedModalComponent = ThemeHOCFactory(theme)(ModalComponent);
+
+            return {
+                render: (props) => {
+                    ReactDOM.render(
+                        <ThemedModalComponent props={props} />
+                    );
+                }
+            };
 
         }
 
