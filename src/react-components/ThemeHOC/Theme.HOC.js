@@ -1,13 +1,10 @@
 import React from 'react';
-// import theme from 'theme.scss';	// user provides? // path???? this is at build time...
 
 // theme classes:
 	// primary_color
 	// secondary_color
 	// logo
 
-
-// what format should theme take?
 
 function ThemeHOCFactory(theme) {
 

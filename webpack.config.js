@@ -5,18 +5,9 @@
     var CopyWebpackPlugin = require('copy-webpack-plugin');
 
     module.exports = [
-        // {
-        // 	entry: './src/index.js',
-        // 	output: {
-        // 		filename: './dist/bundle.js',
-        // 		library: ['MyLib'],
-        // 		libraryTarget: 'umd'
-        // 	}
-        // },
         {
             name: 'modal',
             entry: './src/react-components/component.api.js',
-            // entry: './src/react-components/Modal/Modal.api.js',
             output: {
                 filename: './dist/component_bundle.js',
                 library: ['Components'],
@@ -57,18 +48,32 @@
         },
 
         {
-            name: 'modal_container',
-            entry: './src/modal_container.js',
+            name: 'angular_container',
+            entry: './src/angular_container.js',
             output: {
                 filename: './dist/index.js',
                 libraryTarget: 'umd'
             },
             plugins: [
                 new CopyWebpackPlugin([
-                    { from: './src/modal_container.html', to: './dist/index.html' }
+                    { from: './src/angular_container.html', to: './dist/angular_index.html' }
                 ])
             ]
-        }
+        },
+
+        // {
+        //     name: 'react_container',
+        //     entry: './src/react_container.js',
+        //     output: {
+        //         filename: './dist/index.js',
+        //         libraryTarget: 'umd'
+        //     },
+        //     plugins: [
+        //         new CopyWebpackPlugin([
+        //             { from: './src/react_container.html', to: './dist/react_index.html' }
+        //         ])
+        //     ]
+        // }
 
     ];
 
