@@ -15,10 +15,11 @@
         // },
         {
             name: 'modal',
-            entry: './src/react-components/Modal/Modal.api.js',
+            entry: './src/react-components/component.api.js',
+            // entry: './src/react-components/Modal/Modal.api.js',
             output: {
-                filename: './dist/modal_bundle.js',
-                library: ['Modal'],
+                filename: './dist/component_bundle.js',
+                library: ['Components'],
                 libraryTarget: 'umd'
             },
             module: {

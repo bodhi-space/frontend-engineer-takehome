@@ -8,7 +8,8 @@
 	<body ng-controller="appCtrl" style="background: darkgray">
 		<div id="root"></div>
 		<div id="submit-button"></div>
-		<react-component name="ModalComponent" props="props" watch-depth="reference"></react-component>
+		<react-component name="ModalComponent" props="modal_props" watch-depth="reference"></react-component>
+		<react-component name="ButtonComponent" props="button_props" watch-depth="reference"></react-component>
 	</body>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
@@ -16,7 +17,7 @@
 	<script src="../node_modules/react-dom/dist/react-dom.js"></script>	
 	<script src="../node_modules/ngreact/ngReact.js"></script>
 
-	<script src="./modal_bundle.js"></script>
+	<script src="./component_bundle.js"></script>
 	<script src="./index.js"></script>
 
 </html>
