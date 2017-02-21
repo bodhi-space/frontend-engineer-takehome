@@ -12,7 +12,7 @@ export default {
 
     button: {
         // Use one or the other:
-        self: (config) => {                 // react, ngreact
+        getClass: (config) => {                 // react, ngreact
             // TODO: make theme-able
             // config      = config || {};
             // let theme   = config.theme;
@@ -48,7 +48,7 @@ export default {
     modal: {
 
         // Use one or the other:
-        self: (config) => {
+        getClass: (config) => {
             config      = config || {};
             let theme   = config.theme;
             

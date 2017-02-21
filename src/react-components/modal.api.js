@@ -9,7 +9,7 @@ import ModalComponent from './Modal/Modal.component.js';
 export default {
 
     // Use one or the other:
-    self: (config) => {
+    getClass: (config) => {
         config      = config || {};
         let theme   = config.theme;
         

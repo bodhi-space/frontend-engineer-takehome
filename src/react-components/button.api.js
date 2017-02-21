@@ -9,7 +9,7 @@ import ButtonComponent from './Button/Button.component.js';
 export default {
 
     // Use one or the other:
-    self: (config) => {                 // react, ngreact
+    getClass: (config) => {                 // react, ngreact
         // TODO: make theme-able
         // config      = config || {};
         // let theme   = config.theme;
