@@ -158,7 +158,7 @@ Pass in theme to instance.
     );
 ```
 
-## Component Specific Properties
+## Components
 
 ### Modal
 
@@ -183,4 +183,24 @@ var props = {
         console.log('Cancel button was clicked!');
     }
 };
+```
+
+### Button
+
+*label*       - String  - Button text.
+*onClick*     - Func    - Function to execute on click event.
+*type*        - Enum    - ['primary', 'secondary'] controls contrasting color scheme. Defaults to primary.
+*isDisabled*  - Bool    - Disables button.
+*large*       - Enum    - ['large'] controls predifined button sizes.
+*theme*       - Object  - Overrides certain styles.
+
+#### Example
+```
+    <EchoButton 
+        label="Submit"
+        onClick={this.handleClick}
+        type="secondary"
+        size="large"
+        isDisabled="false"
+    />
 ```
