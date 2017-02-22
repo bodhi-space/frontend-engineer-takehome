@@ -102,7 +102,7 @@ Each component has public interface that can be used in two mutually exclusive w
 
 `var Button = ButtonFactory.getClass(config)`
 
-`ReactDOM.render(<Button />, document.getElementById('app')`
+`ReactDOM.render(<Button />, document.getElementById('app'))`
 
 ###Parameters 
 
@@ -156,4 +156,31 @@ Pass in theme to instance.
             //props
         }
     );
+```
+
+## Component Specific Properties
+
+### Modal
+
+*text*                  - String    - Modal main text.
+*title*                 - String    - Header text.
+*confirm_text*          - String    - Confirm button text.
+*cancel_text*           - String    - Cancel button text.
+*handleClickConfirm*    - Function  - Callback when confirm button is clicked.
+*handleClickCancel*     - Function  - Callback when cancel button is clicked.
+
+#### Example
+```
+var props = {
+    text                : 'This is where the main text goes.',
+    title               : 'My Modal',
+    confirm_text        : 'Save',
+    cancel_text         : 'Cancel',
+    handleClickConfirm  : function(e) {
+        console.log('Confirm button was clicked!');
+    },
+    handleClickCancel   : function(e) {
+        console.log('Cancel button was clicked!');
+    }
+};
 ```
