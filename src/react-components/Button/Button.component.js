@@ -1,33 +1,51 @@
 import React from 'react';
 import styles from './_Button.scss';
 
-const ModalButtonComponent = ( {buttonClassName, onClick, text, isDisabled, theme} ) => {
-
-    // Theming
-    let style = {};
-    if (theme) {
-        style = {
-            background: theme.primary_color
+var EchoButton = React.createClass({
+    propTypes: {
+        label: React.PropTypes.string,
+        type: React.PropTypes.string,
+        size: React.PropTypes.string,
+        onClick: React.PropTypes.func,
+        isDisabled: React.PropTypes.bool,
+		theme: React.PropTypes.object
+    },
+    getInitialState() {
+        return {
+            isDisabled: false
         };
-    }
+    },
+    defaultProps: {
+        type: 'primary'
+    },
+    componentWillReceiveProps(props) {
+        this.setState({
+            isDisabled: props.isDisabled
+        });
+    },
+	render() {
+        var classes = [
+            Styles.button,
+            this.props.type === 'secondary' ? Styles.secondary : '',
+            this.props.size === 'large' ? Styles.large : ''
+        ];
 
-    return (
-        <button 
-            style={style}
-            className={buttonClassName || styles.button} 
-            onClick={onClick}
-            disabled={isDisabled}>
-            {text}
-        </button>
-    );
-};
+        let style = {};
 
-ModalButtonComponent.propTypes = {
-    buttonClassName : React.PropTypes.string,
-    onClick         : React.PropTypes.func,
-    text            : React.PropTypes.string.isRequired,
-    isDisabled      : React.PropTypes.bool,
-    theme           : React.PropTypes.object
-};
+        if (theme) {
+            style = {
+                background: thos.props.theme.primary_color
+            };
+        }
 
-export default ModalButtonComponent;
+		return (
+            <button  
+                className={classes.join(' ')} 
+                onClick={this.props.onClick}
+                disabled={this.state.isDisabled}
+            >{this.props.label}</button>
+        );
+	}
+});
+
+export default EchoButton;
