@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import ThemeHOCFactory from '../ThemeHOC/Theme.HOC.js';
 
 // Components
-import ButtonComponent from './Button.component.js';
+import EchoButton from './Button.component.js';
 
 export default {
 
@@ -12,7 +12,7 @@ export default {
     getClass: (config) => {                 // react, ngreact
         config      = config || {};
         let theme   = config.theme;
-        return ThemeHOCFactory(theme)(ButtonComponent);
+        return ThemeHOCFactory(theme)(EchoButton);
 
     },
     new: (config) => {                  // other
@@ -21,7 +21,7 @@ export default {
         config      = config || {};
         let theme   = config.theme;
 
-        let ThemedButtonComponent = ThemeHOCFactory(theme)(ButtonComponent);
+        let ThemedEchoButton = ThemeHOCFactory(theme)(EchoButton);
 
         return {
 
@@ -29,7 +29,7 @@ export default {
 
             render: (props) => {
                 ReactDOM.render(
-                    <ThemedButtonComponent props={props} />
+                    <ThemedEchoButton props={props} />
                     );
             }
         };
