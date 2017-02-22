@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './_Button.scss';
+import Styles from './_Button.scss';
 
 var EchoButton = React.createClass({
     propTypes: {
@@ -32,14 +32,15 @@ var EchoButton = React.createClass({
 
         let style = {};
 
-        if (theme) {
+        if (this.props.theme) {
             style = {
-                background: thos.props.theme.primary_color
+                background: this.props.theme.primary_color
             };
         }
 
 		return (
             <button  
+				style={style}
                 className={classes.join(' ')} 
                 onClick={this.props.onClick}
                 disabled={this.state.isDisabled}
