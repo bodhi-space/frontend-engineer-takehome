@@ -21,7 +21,7 @@ export default {
         config      = config || {};
         let theme   = config.theme;
 
-        let ThemedModalComponent = ThemeHOCFactory(theme)(ButtonComponent);
+        let ThemedButtonComponent = ThemeHOCFactory(theme)(ButtonComponent);
 
         return {
 
@@ -29,7 +29,7 @@ export default {
 
             render: (props) => {
                 ReactDOM.render(
-                    <ThemedModalComponent props={props} />
+                    <ThemedButtonComponent props={props} />
                     );
             }
         };
