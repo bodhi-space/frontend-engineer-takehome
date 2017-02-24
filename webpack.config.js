@@ -1,20 +1,14 @@
-// TODO: generalize the component api tasks
-
-
 (function() {
 
     'use strict';
 
-    var CopyWebpackPlugin = require('copy-webpack-plugin');
-
-
     module.exports = [
         {
-            name: 'modal',
-            entry: './src/react-components/Modal/index.js',
+            name: 'TopSalesList',
+            entry: './src/top-sales-list/index.js',
             output: {
-                filename: './dist/Modal/index.js',
-                library: ['EchoModal'],
+                filename: './dist/TopSalesList/index.js',
+                library: ['TopSalesListModule'],
                 libraryTarget: 'umd'
             },
             module: {
@@ -50,13 +44,12 @@
                 ]
             }
         },
-
         {
-            name: 'button',
-            entry: './src/react-components/Button/index.js',
+            name: 'Utils',
+            entry: './src/utils/transformData.js',
             output: {
-                filename: './dist/Button/index.js',
-                library: ['EchoButton'],
+                filename: './dist/Utils/transformData.js',
+                library: ['Utils'],
                 libraryTarget: 'umd'
             },
             module: {
@@ -92,36 +85,7 @@
                 ]
             }
 
-        },
-
-        // {
-        //     name: 'angular_container',
-        //     entry: './src/angular_container.js',
-        //     output: {
-        //         filename: './dist/index.js',
-        //         libraryTarget: 'umd'
-        //     },
-        //     plugins: [
-        //         new CopyWebpackPlugin([
-        //             { from: './src/angular_container.html', to: './dist/angular_index.html' }
-        //         ])
-        //     ]
-        // },
-
-        // {
-        //     name: 'react_container',
-        //     entry: './src/react_container.js',
-        //     output: {
-        //         filename: './dist/index.js',
-        //         libraryTarget: 'umd'
-        //     },
-        //     plugins: [
-        //         new CopyWebpackPlugin([
-        //             { from: './src/react_container.html', to: './dist/react_index.html' }
-        //         ])
-        //     ]
-        // }
-
+        }
     ];
 
 })();

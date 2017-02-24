@@ -1,20 +1,22 @@
 {
-  "name": "echo-component-library",
+  "name": "hotschedules-frontend-challenge",
   "version": "1.0.0",
-  "description": "Echo Component Library",
+  "description": "HotSchedules Frontend Challenge",
   "scripts": {
-    "unmod": "rm -rf ./node_modules",
-    "dev": "cross-env NODE_ENV=production webpack --config ./webpack.config.js --colors --progress --watch"
+    "build-library": "webpack --config ./webpack.config.js --colors --progress --watch",
+    "build-react-app": "webpack --config ./react-app/webpack.config.js --colors --progress --watch"
   },
   "keywords": [
     "React"
   ],
-  "author": "Alex Haines, Tiffany Lee, Daniel Olasky",
+  "author": "Alex Haines",
   "license": "ISC",
   "dependencies": {
+    "lodash": "^4.17.4",
     "ngreact": "^0.3.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "request": "^2.79.0"
   },
   "devDependencies": {
     "babel-core": "^6.7.7",
@@ -34,11 +36,10 @@
     "eslint-plugin-react": "^6.9.0",
     "eslint-plugin-standard": "^2.0.1",
     "file-loader": "^0.10.0",
+    "json-server": "^0.9.5",
     "lodash": "^4.17.4",
     "node-sass": "^4.5.0",
-    "react-redux": "^5.0.2",
     "react-svelte-components": "^1.0.0",
-    "redux-thunk": "^2.2.0",
     "sass-loader": "^6.0.0",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.1"
