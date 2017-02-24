@@ -12,12 +12,12 @@ you form a comprimise to pacify all the share holders???
 
 Though the execs want to see a full fledged library completed by end of quarter, they really just need to get one
 component released to production for all the apps ASAP to apease a large customer. Typical. The component in question is 
-list which displays a customer's top selling items. Your job will be to create the component and implement it in the 
-Angular app ('./angular-app'), the React app ('./react-app') and the jQuery app ('./jquery-app).
+a list which displays a customer's top selling items. Your job will be to create the component and implement it in the 
+Angular app ('./angular-app'), the React app ('./react-app'), and the jQuery app ('./jquery-app).
 
 Your product manager provides you with the requirements:
 
-1. Display the top 10 selling products in order from most sold to last. 
+1. Display the top 10 selling products in order from most sold to least. 
 2. Display the revenue of each product.
 
 Your star designer provides you with awesome mocks:
@@ -36,7 +36,7 @@ Your backend team exposes an api:
 
 Clone this repo.
 
-`git clone x`
+`git clone git@bitbucket.org:redbookplatform/frontend-challenge.git`
 
 Install. Set up npm if needed (http://blog.teamtreehouse.com/install-node-js-npm-mac).
 
@@ -45,6 +45,7 @@ Install. Set up npm if needed (http://blog.teamtreehouse.com/install-node-js-npm
 Install global packages
 
 `npm install webpack -g`
+
 `npm install json-server -g`
 
 Start your mock server
@@ -72,7 +73,7 @@ conducive to your component if needed in 'src/utils/'.
 Implement the component so that it displays on the page with the relevant data in each of the 
 three applications.
 
-*hint* Use a library called ngReact to help with implementation in the Angular app.
+*hint* - Use a library called ngReact to help with implementation in the Angular app.
 
 
 
