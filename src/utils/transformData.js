@@ -2,6 +2,6 @@
 //import {function} from 'lodash';
 
 //transform data if needed here
-export function transformData(data) {
+export default function transformData(data) {
     return data;
 };

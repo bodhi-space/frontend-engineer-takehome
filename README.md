@@ -12,8 +12,8 @@ you form a comprimise to pacify all the share holders???
 
 Though the execs want to see a full fledged library completed by end of quarter, they really just need to get one
 component released to production for all the apps ASAP to apease a large customer. Typical. The component in question is 
-a list which displays a customer's top selling items. Your job will be to create the component and implement it in the 
-Angular app ('./angular-app'), the React app ('./react-app'), and the jQuery app ('./jquery-app).
+a list which displays a customer's top selling items. Your job will be to create the component, keeping in mind it has to work
+in a variety of environments.
 
 Your product manager provides you with the requirements:
 
@@ -31,6 +31,8 @@ Your backend team exposes an api:
 * The route '/PurchaseOrders' returns the latest PurchaseOrders
 * Each PurchaseOrder has an array of products PurchaseOrder.products
 * each Product has an order_count and vendor_price property which can be used to calculate revenue
+
+*hint* - revenue = Product.order_count * (Product.vendor_price.value / Product.vendor_price.scale)
 
 ## Getting Started 
 
@@ -52,28 +54,19 @@ Start your mock server
 
 `json-server --watch ./data/db.json`
 
-In separate terminal window use webpack to build your app.  
+In separate terminal window use webpack to build your library as well as sandbox app.  
 
 Webpack is a module bundler that bundles all your code into one file and compiles it
 from Javascript ES6 to Javascript ES5.
 
-`npm run build-library`
+`npm run build`
 
-In yet another window use webpack to build the react app.
-
-`npm run build-react-app`
-
-The builds will re-run everytime you update your source.  
+The build will re-run everytime you update your source.  
 
 Write the TopSalesList component in 'src/top-sales-list'.
 
 You can write a utility function to help transform the data from the server to a format more
 conducive to your component if needed in 'src/utils/'.
-
-Implement the component so that it displays on the page with the relevant data in each of the 
-three applications.
-
-*hint* - Use a library called ngReact to help with implementation in the Angular app.
 
 
 

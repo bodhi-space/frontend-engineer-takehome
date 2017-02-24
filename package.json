@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "HotSchedules Frontend Challenge",
   "scripts": {
-    "build-library": "webpack --config ./webpack.config.js --colors --progress --watch",
-    "build-react-app": "webpack --config ./react-app/webpack.config.js --colors --progress --watch"
+    "build": "webpack --config ./webpack.config.js --colors --progress --watch"
   },
   "keywords": [
     "React"
