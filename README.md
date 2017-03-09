@@ -34,6 +34,11 @@ Your backend team exposes an api:
 
 *hint* - revenue = Product.order_count * (Product.vendor_price.value / Product.vendor_price.scale)
 
+*note* - You will notice vendor_price is an object with three properties: code, value, and scale. Code
+is the type of currency. For performance reasons we don't save numbers with decimal points in the database. Instead,
+the scale property holds the exponent of 10 by which to divide the value property by. So for example,
+{value: 1000, scale: 2} is equivalent to 1000 / 10^2 => 1000 / 100 => $10.00.
+
 ## Getting Started 
 
 Clone this repo.

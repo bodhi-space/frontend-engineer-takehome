@@ -88,9 +88,9 @@
         },
         {
             name: 'test-app',
-            entry: './test-app/app.js',
+            entry: './test-app/src/app.js',
             output: {
-                filename: './test-app/bundle.js',
+                filename: './test-app/build/bundle.js',
             },
             module: {
                 loaders: [
